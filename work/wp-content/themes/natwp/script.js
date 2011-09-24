@@ -1,0 +1,14 @@
+(function($){
+	$(document).ready(function(){
+		$('#searchlink').click(function(event){
+			event.preventDefault();
+			$('#title').hide();
+			$('#searchform').show();
+		});
+		$('#cancelsearch').click(function(event){
+			event.preventDefault();
+			$('#title').show();
+			$('#searchform').hide();
+		});
+	});
+})(jQuery);

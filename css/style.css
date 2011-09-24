@@ -1,0 +1,487 @@
+/* 
+ * HTML5 ✰ Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling. 
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ * 
+ * ==|== normalize ==========================================================
+ */
+
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { 
+	margin: 0; 
+	padding: 0;
+	border: 0;
+	font-size: 90%; 
+	line-height: 1.231; 
+	min-width:800px;	
+	height:100%; 
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	background-color: #000;
+}
+
+#navcontainer
+	{
+	margin: 0;
+	padding: 20px 0 20px 10px;
+	background-color: #000
+}
+	
+#navlist
+	{
+	font-size: 1.1em; 
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	margin: 0;
+	padding: 0px 0 10px 10px;
+	background-color: #000
+}
+	
+#navlist ul, #navlist li
+	{
+	margin: 0 0 20px 0;
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+}
+	
+#navlist a:link, #navlist a:visited
+	{
+	float: left;
+	line-height: 14px;
+	font-weight: bold;
+	margin: 0 10px 4px 10px;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: none;
+}
+	
+#navlist a:link#current, #navlist a:visited#current
+	{
+	color: #666666;
+}
+	
+#navlist a:hover, #navlist a:hover#current  { 
+	color: #ffffff;
+	background-color: lime;
+}
+
+
+#bg-box {
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	margin-top:45px;
+	width: 100%;
+	height: 100%;
+}
+#bg {
+	position:absolute;
+	top:0;
+	left:0;
+	width:1.28em;
+	height:1.1em;
+}
+
+#blackbar {
+	height: 40px;
+	background-color: #000;
+	z-index: 2;
+	margin: 0 0 0 0;
+	padding: 0;
+	}
+
+#content {
+	margin-left: 50px;
+	width:100%;
+	position:relative;
+	z-index:2;
+}
+
+#content a {
+	 color: #fff; background-color: #3e2813; text-decoration: none; 
+}
+
+#content a:hover {
+	 color: #fff; background-color: lime; text-decoration: none; 
+}
+
+
+#headline {
+	width: 350px;
+	margin-bottom: -15px;
+}
+
+h1 {
+	font-size: 4em;
+	color: #000;
+	background-color: #fff;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+
+#subheadline {
+	width: 600px;
+	margin: 0;
+	margin-bottom: -15px;
+}
+
+#subheadline h2 {
+	font-size: 2.75em;
+	color: #000;
+	background: #fff;
+	padding: 0 0 0 10px;
+}
+
+#description {
+	width: 700px;
+	background: #fff;
+	margin-bottom: 25px;
+}
+
+
+#description p {
+	padding: 10px 50px 10px 10px;
+	font-size: 1.1em;
+	color: #000;
+}
+
+/* column container */
+.colmask {
+	position:relative;	/* This fixes the IE7 overflow hidden bug */
+	clear:both;
+	float:left;
+	width:100%;			/* width of whole page */
+	overflow:hidden;		/* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+	float:left;
+	width:100%;			/* width of page */
+	position:relative;
+}
+.twitter-column {
+	float:left;
+	position:relative;
+	padding:0 0 1em 0;	/* no left and right padding on columns, we just make them narrower instead 
+					only padding top and bottom is included here, make it whatever value you need */
+	margin-left: 50px;
+	overflow:hidden;
+	background-color: #ededed;
+}
+
+.holga-column,
+.lastfm-column {
+	float:left;
+	position:relative;
+	padding:0 0 1em 0;	/* no left and right padding on columns, we just make them narrower instead 
+					only padding top and bottom is included here, make it whatever value you need */
+	margin-left: 30px;
+	overflow:hidden;
+	background-color: #ededed;
+}
+
+
+/* 3 Column settings */
+.threecol {
+	background:#fff;		/* right column background colour */
+}
+.threecol .colmid {
+	right:25%;			/* width of the right column */
+	background:#fff;		/* center column background colour */
+}
+.threecol .colleft {
+	right:50%;			/* width of the middle column */
+	background:#fff;	/* left column background colour */
+}
+.threecol .twitter-column {
+	width:46%;			/* width of center column content (column width minus padding on either side) */
+	left:102%;			/* 100% plus left padding of center column */
+}
+.threecol .holga-column {
+	width:21%;			/* Width of left column content (column width minus padding on either side) */
+	left:31%;			/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+}
+.threecol .lastfm-column {
+	width:21%;			/* Width of right column content (column width minus padding on either side) */
+	left:85%;			/* Please make note of the brackets here:
+					(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
+}
+
+
+
+.twitter-column img {
+	padding: 15px 0 35px 125px;
+}
+
+.twitter.post a {
+	 color: #fff; background-color: #3e2813; text-decoration: none;
+}
+
+.twitter.post a:hover {
+	 color: #fff; background-color: lime; text-decoration: none;
+}
+
+
+.twitter.post {
+	padding: 0 15px 15px 17px;
+	width: 320px;
+}
+
+.holga-column img {
+	padding: 15px 0 10px 68px;
+}
+
+.holga img {
+	padding: 15px 15px 0 15px;
+}
+
+.lastfm-column img {
+	padding: 15px 0 25px 85px;
+}
+
+.lastfm.post p a{
+	color: #fff;
+	background-color: #3e2813;
+	text-decoration: none;
+}
+
+.lastfm.post {
+	width: 205px;
+	padding: 0 15px 15px 15px;
+}
+
+.lastfm p {
+	display:block;
+	float: left;
+	padding: 10px;
+	font-size: 1.25em;
+	color: #000;
+}
+
+.lastfm p a {
+	color: #fff;
+	background-color: #3e2813;
+	text-decoration: none;
+}
+*/
+
+.footer {
+	height: 100px;
+	margin: 50px;
+	padding: 50px;
+}
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* 
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a:hover { background-color: lime; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+.screen-name {font-weight: bolder; }
+.created-at {font-size: 70%; color: #666666}
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/e 
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9 
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* ==|== primary styles =====================================================
+   Author: 
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */ 
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+
+/* ==|== media queries ======================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+
+}
+
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+
+}
+
+
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
