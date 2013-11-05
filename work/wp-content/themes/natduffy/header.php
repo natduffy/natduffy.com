@@ -23,7 +23,7 @@
     	<div id="navcontainer">
 			<ul id="navlist">
 			<li><a href="../index.html">natduffy</a></li>
-			<li><a href="../resume.html">resume</a></li>
+			<li><a href="../resume.html">about</a></li>
 			<li id="active"><a href="http://natduffy.com/work" id="current">work</a></li>
 
 			
